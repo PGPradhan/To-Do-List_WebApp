@@ -4,11 +4,28 @@
     <meta charset="utf-8">
     <title>To do List</title>
   </head>
-  <body>
+  <body style="background-color:pink">
     <center>
       <h1 style="color:red">It's a <%=anyDay %> </h1>
+      </center>
+<ul>
+  <!-- <li>Buy Food</li>
+  <li>Cook Food</li>
+  <li>Eat Food</li> -->
 
-    </center>
+  <% for(var i=0;i<newListItems.length;i++) { %>
+    <li><%=  newListItems[i]  %></li>
+  <% } %>
+
+
+
+</ul>
+<form class="" action="/" method="post">
+  <input type="text" name="newItem" >
+  <button type="submit" name="button" style="color:blue; background-color:yellow">Add</button>
+
+</form>
+
 
   </body>
 </html>
