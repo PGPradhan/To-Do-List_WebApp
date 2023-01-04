@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>To do List</title>
-  </head>
-  <body style="background-color:pink">
-    <center>
-      <h1 style="color:red">It's a <%=anyDay %> </h1>
-      </center>
-<ul>
-  <!-- <li>Buy Food</li>
-  <li>Cook Food</li>
-  <li>Eat Food</li> -->
 
-  <% for(var i=0;i<newListItems.length;i++) { %>
-    <li><%=  newListItems[i]  %></li>
-  <% } %>
+<head>
+  <meta charset="utf-8">
+  <title>To do List</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
 
+<body>
 
-
-</ul>
-<form class="" action="/" method="post">
-  <input type="text" name="newItem" >
-  <button type="submit" name="button" style="color:blue; background-color:yellow">Add</button>
-
-</form>
+  <div class="box" id="heading">
+    <h1>It's a <%=ListTitle %> </h1>
+  </div>
+  <div class="box">
+    <% for(var i=0;i<newListItems.length;i++) { %>
+    <div class="item">
+      <input type="checkbox" >
+      <p><%=  newListItems[i]  %></p>
+    </div>
+    <% } %>
 
 
-  </body>
+    <form class="item" action="/" method="post">
+      <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+      <button type="submit" name="list" value=<%= ListTitle %>>+</button>
+
+    </form>
+  </div>
+
+</body>
+
 </html>
